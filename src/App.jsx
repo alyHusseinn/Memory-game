@@ -1,7 +1,6 @@
 import { useState } from "react"
 import Game from "./components/game/game";
-import ChoiseLevel from "./components/levelChoice";
-
+import ChoiseLevel from "./components/screens/GameStart";
 function App() {
 
   const [numOfCards, setNumOfCards] = useState(6);

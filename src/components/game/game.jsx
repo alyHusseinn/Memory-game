@@ -2,8 +2,6 @@ import { useEffect, useState } from "react";
 import Loading from "./Loader";
 import GameBoard from "./gameBoard";
 
-// let Cards = [];
-
 function Game({NumOfCards, endGame}){
     const [Cards, setCards] = useState([]);
 
