@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
 import Loading from "./Loader";
+import GameBoard from "./gameBoard";
 
-function Game({NumOfCards}){
-    const [Cards, setCards] = useState({});
+// let Cards = [];
+
+function Game({NumOfCards, endGame}){
+    const [Cards, setCards] = useState([]);
 
     useEffect(() => {
         let isCardsAvailable = false;
@@ -34,14 +37,7 @@ function Game({NumOfCards}){
     },[NumOfCards]); // only use effect when the component is mounted
 
     if(Cards.length > 0) {
-        return (
-            <>
-                <div>
-                    the data have been fetched and it's ready for manipulation
-                    {console.log(Cards)}
-                </div>
-            </>
-        )
+        return <GameBoard CARDS={Cards} endGame={endGame}/>;
     }
     else {
         return <Loading/>;
