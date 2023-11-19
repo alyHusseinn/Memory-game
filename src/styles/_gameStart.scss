@@ -1,0 +1,70 @@
+@import 'base';
+
+.choosing-level{
+    @include flex-item(column, wrap, 2rem);
+    margin: 5rem auto;
+    width: 50%;
+    padding: 2rem;
+    border: 2px solid white;
+    background-color: rgba(0, 0, 0, 0.363);
+    box-shadow: 5px 5px 0 white, 10px 10px 0 black, 15px 15px 0 white;
+    @include animateUpDwon;
+    h2{
+        font-size: 30px;
+        text-shadow: 5px 5px 10px black;
+    }
+
+    
+}
+
+.levels{
+    width: 100%;
+    @include flex-item(row, wrap, 1rem);    
+}
+
+
+.loader{
+  width: 200px;
+  height: 200px;
+  position: relative;
+  top: 50px;
+  margin: 0 auto;
+}
+
+.box-1,.box-2, .box-3, .box-4, .load{
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  position: absolute;
+  border: 5px solid;
+  animation: load-anim 0.2s infinite linear;
+}
+
+.box-1,.box-2{
+  animation-direction: reverse;
+}
+.box-1,.box-3{
+  border-radius: 30% 70% 70% 30% / 30% 32% 68% 70% ;
+}
+
+.box-2,.box-4{
+  border-radius: 63% 37% 16% 84% / 62% 64% 36% 38% ;
+}
+
+.load{
+  border: 0;
+  animation: 0;
+  text-align: center;
+  top: 40%;
+  font-size: 30px;
+  color: white;
+}
+
+@keyframes load-anim{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}

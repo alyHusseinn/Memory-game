@@ -1,0 +1,41 @@
+$primary-color: white;
+
+*{
+    margin: 0;
+    padding: 0;
+} 
+
+button {
+    font-size: 25px;
+    padding: 0.5rem;
+    transform: skew(10deg);
+    box-shadow: 2px 2px 0 black, 4px 4px 0 white, 6px 6px 0 black, 8px 8px 0 white;
+    
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+@mixin flex-item($dir, $wrap, $gap){
+    display: flex;
+    flex-direction: $dir;
+    flex-wrap: $wrap;
+    gap: $gap;
+    justify-content: center;
+    text-align: center;
+}
+
+@mixin animateUpDwon(){
+    animation: updown 1s alternate infinite;
+
+    @keyframes updown {
+        0%{
+            transform: translateY(15px) scale(1.03);
+        }
+        100%{
+            transform: translateY(-15px);
+        }
+    }
+}
+
