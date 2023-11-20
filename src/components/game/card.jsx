@@ -1,8 +1,8 @@
 import Tilt from "react-parallax-tilt";
 
-const Card = ({imgSrc, handleHitCard, flipped}) => {
+const Card = ({imgSrc, handleHitCard, flipped, isGameOver}) => {
   return (
-    <div className={flipped? 'card flipped' : 'card'} onClick={handleHitCard}>
+    <div className={flipped? 'card flipped' : 'card'} onClick={!isGameOver && handleHitCard}>
       <Tilt
         glareEnable={true}
         glareMaxOpacity={0.6}

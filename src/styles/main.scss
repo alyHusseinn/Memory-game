@@ -9,6 +9,8 @@
     src: url('../assets/fonts/PokerFont.otf'); 
 } 
 body{
+    position: relative;
+    margin-top: -20px;
     min-height: 100vh;
     font-family: 'MyFont', "Poppins", sans-serif;
     background-image: url("../assets/imgs/background.jpg");

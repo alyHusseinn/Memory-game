@@ -2,6 +2,10 @@
 
 .lose, .win{
     @include flex-item(column, wrap, 2rem);
+    position: absolute;
+    z-index: 1;
+    top: 200px;
+    left: 20%;
     margin: 5rem auto;
     width: 50%;
     padding: 2rem;
@@ -17,5 +21,21 @@
     }
 
     
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(3px);
+}
+
+@media  screen and (max-width: 500px) {
+    .lose, .win{
+        left: 12%;
+    }
 }
 
