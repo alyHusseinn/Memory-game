@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Card from "../game/card";
+import flipSound from '../../assets/sounds/flip.mp3';
 
 const GameScreen = ({ cards, scoreMsg, hitCard }) => {
 
@@ -9,16 +10,25 @@ const GameScreen = ({ cards, scoreMsg, hitCard }) => {
     if(flipped === true) {
       setTimeout(() => {
         setFlipped(false);
-      }, 1200)
+        playFlip();
+      }, 1500)
     }
   }, [flipped])
 
   function handleHitCard(cardCode){
     setFlipped(true);
+    playFlip();
     setTimeout(() => {
-      hitCard(cardCode)
+      hitCard(cardCode);
+      
     }, 500)
   }
+
+  const playFlip = () => {
+      const audio = new Audio(flipSound);
+      audio.volume = 0.2;
+      audio.play();
+  };
 
 
   return (

@@ -11,7 +11,7 @@
     grid-template-rows: auto;
     justify-content: space-around;
     align-items: center;
-    width: 50%;
+    width: 40%;
     height: 80%;
     margin: 0 auto;
     grid-gap: 1rem;
@@ -45,7 +45,7 @@
     }
 
     .card-back{
-        background-image: url('../assets/card-back-2.jpeg');
+        background-image: url('../assets/imgs/card-back-2.jpeg');
         background-attachment: fixed;
         background-repeat: no-repeat;
         background-size: cover;
@@ -63,7 +63,7 @@
 
 @media screen and (max-width: 768px) {
     .cards-section{
-        width: 80%;
+        width: 90%;
     }
     
 }
