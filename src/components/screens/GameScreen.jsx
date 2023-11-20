@@ -13,6 +13,13 @@ const GameScreen = ({ cards, scoreMsg, hitCard }) => {
     }
   }, [flipped])
 
+  function handleHitCard(cardCode){
+    setFlipped(true);
+    setTimeout(() => {
+      hitCard(cardCode)
+    }, 500)
+  }
+
 
   return (
     <div className="game-screen">
@@ -24,7 +31,7 @@ const GameScreen = ({ cards, scoreMsg, hitCard }) => {
               imgSrc={card.image}
               flipped={flipped}
               key={index}
-              handleHitCard={() => {setFlipped(true); hitCard(card.code);  }}
+              handleHitCard={() => {handleHitCard(card.code) }}
             />
           );
         })}
